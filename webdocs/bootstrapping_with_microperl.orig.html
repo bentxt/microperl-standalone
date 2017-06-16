@@ -1,0 +1,650 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Took this out for IE6ites "http://www.w3.org/TR/REC-html40/loose.dtd" -->
+<html lang="en">
+  <head id="stdcontainer">
+    <title>
+      bootstrapping with microperl
+    </title>
+
+    <!-- Theme : Web safe blue PerlMonks Theme    -->
+
+    <script language="javascript" type="text/javascript" src="?node=list%20replies%20toggle%20javascript"></script>
+<link rel="stylesheet" href="/css/common.css" type="text/css" />
+
+    <link rel="stylesheet" href="?node_id=204962" type="text/css" />
+
+    <!-- No CSS Link in Display Settings -->
+
+    <!-- No CSS Data in Display Settings -->
+
+    <link rel="icon" href="/favicon.ico" />
+
+    
+
+
+  </head>
+
+  <body id="id-228040">
+<!-- monktainer -->
+<!-- monkbar2001 -->
+
+    <table id="monkbar" width="100%" border="0"
+        cellpadding="0" cellspacing="0">
+      <tr class="bannerrow">
+        <td align="left" width="100%">
+        <a href="http://pair.com">
+ <img src="http://promote.pair.com/i/pair-banner-current.gif"
+  height = "60"
+  width  = "468"
+  alt    = "Beefy Boxes and Bandwidth Generously Provided by pair Networks"
+ />
+</a>
+        </td>
+        <td rowspan="2" align="right" valign="bottom">
+          <!-- Monk Pic Turned Off In User Settings -->
+        </td>
+      </tr>
+      <tr class="monkquip">
+        <td class="monkquip"
+            valign="bottom" width="100%" >
+          Perl-Sensitive Sunglasses
+        </td>
+      </tr>
+      <tr class="titlebar">
+        <td class="titlebar">
+
+          <form method="get" action="?"
+              enctype="application/x-www-form-urlencoded" >
+            &nbsp;
+            <input type="text" name="node"
+                id="search_text"
+                size="20" maxlength="300" />
+            <input class="titlebar" type="submit"
+                value="Search" />
+          </form>
+        </td>
+        <td class="titlebar" id="mb2001titlebar" align="right" >
+          <a class="titlebar" href="?">PerlMonks</a>&nbsp;&nbsp;
+        </td>
+      </tr>
+    </table>
+
+<!-- /monkbar2001 -->
+<!-- Begin title bar -->
+<table width="98%" align="center" id="titlebar-top">
+  <tbody>
+    <tr>
+      <td valign="middle" class="titlechooser">
+        <!-- node_info_string: (h3)Title and (span)Author -->
+
+<h3 class="other">bootstrapping with microperl</h3>
+<span class="attribution">by <a href="?node_id=131741">zentara</a><span class="attribution-title"> (Archbishop)</span> </span>
+
+        <!-- /node_info_string -->
+      </td>
+      <td valign="top" align="right" class="monktitlebar">
+        <!-- monktitlebar -->
+        <ul class="topnavmenu inline-list">
+<li><a href="?node_id=109">Log&nbsp;in</a></li><li><a href="?node_id=101">Create&nbsp;a&nbsp;new&nbsp;user</a></li>
+<li><a href="?">The&nbsp;Monastery&nbsp;Gates</a></li>
+<li><a href="?node=Super%20Search">Super&nbsp;Search</a></li>
+<br />
+<li><a href="?node=Seekers%20of%20Perl%20Wisdom">Seekers&nbsp;of&nbsp;Perl&nbsp;Wisdom</a></li>
+<li><a href="?node=Meditations">Meditations</a></li>
+<li><a href="?node=Perl%20Monks%20Discussion">PerlMonks&nbsp;Discussion</a></li>
+<br />
+<li><a href="?node=Obfuscated%20Code">Obfuscation</a></li>
+<li><a href="?node=Reviews">Reviews</a></li>
+<li><a href="?node=Cool%20Uses%20for%20Perl">Cool&nbsp;Uses&nbsp;For&nbsp;Perl</a></li>
+<li><a href="?node=Perl%20News">Perl&nbsp;News</a></li>
+<li><a href="?node=Categorized%20Questions%20and%20Answers">Q&amp;A</a></li>
+<li><a href="?node=Tutorials">Tutorials</a></li>
+<br />
+<li><a href="?node=Perl%20Poetry">Poetry</a></li>
+<li><a href="?node=Recently%20Active%20Threads">Recent&nbsp;Threads</a></li>
+<li><a href="?node=Newest%20Nodes">Newest&nbsp;Nodes</a></li>
+<li><a href="?node=Offering%20Plate">Donate</a></li>
+<li><a href="?node=Tidings">What's&nbsp;New</a></li>
+</ul>
+
+
+<!--
+args=(monktitlebar sitedoclet -TOPNAV_SPECIAL <li><a href="?node_id=109">Log&nbsp;in</a></li><li><a href="?node_id=101">Create&nbsp;a&nbsp;new&nbsp;user</a></li>)
+NODE.title = bootstrapping with microperl
+NODE.owner = 131741
+N.title = monktitlebar sitedoclet
+N.owner = 17342
+-->
+
+        <!-- /monktitlebar -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table width="98%" align="center" id="titlebar-bottom">
+  <tbody>
+    <tr>
+      <td valign="middle" class="titlechooser">
+        <!-- node_info_string: (span)Date and (span)Links -->
+
+<span class="attribution">on Jan 18, 2003 at 20:00&nbsp;UTC</span>
+<span class="addlinks">( #<a href="?node_id=228040">228040</a>=<a href="?node_id=1042">CUFP</a>: <a href="?node_id=228040;displaytype=print">print</a> <a href="?node_id=228040;replies=1;displaytype=print">w/replies</a>, <a href="?displaytype=xml;node_id=228040">xml</a> )</span>
+
+        <!-- /node_info_string -->
+      </td>
+      <td valign="middle" align="right" class="monktitlebar">
+        <a href="?node=PerlMonks%20FAQ">Need Help??</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- End title bar -->
+<!-- Begin main (monktainer) -->
+
+<center>
+  <table width="98%">
+    <tr>
+      <td  width="80%" valign="top"  class="main_content">
+        <!--contained stuff-->
+        <!-- BEGIN general container -->
+
+<p><div class="doctext" id="writeup">
+<!-- [{parselinks,}] -->
+This may not be a new use, but many (like me) may not have tried it until now. Microperl is worth your attention, especially
+if you are like me and  have 2 left feet when it comes to shell
+scripts, awk and sed.
+
+Have you heard of microperl, but never tried it?
+Here is a success story. It definitely is worth using.
+<p>
+I've developed my own system for making full backups
+to cdr, and use perl of course. A problem arises when
+restoring to a blank system, in that there is no perl
+available to run the restore script. Well I was thinking
+about using a shell script (kind of clunky with strings),
+or a C program(since it's a pretty simple operation).
+Then I came across a node which pointed me to microperl,
+which comes with 5.8. It fills the bill! It is only
+908k on my system, which easily fits on a cdrom. So with
+microperl and my 2 small scripts, I get a bootstrap perl
+restore system.
+
+The backup system relies on multi-volume tar archives,
+which are made for each second level sub-directory, then
+gunzipped and written to a ext2 image mounted via loop.
+When the image gets filled, it gets written to cdr, and
+the next iso is started. I delve 2 layers into /usr since
+it's so big.
+
+So I end up with a bunch of files named:
+<pre>
+_etc-1.tar.gz
+_root-1.tar.gz
+_root-2.tar.gz
+_root-3.tar.gz
+_lib-1.tar.gz
+_lib-2.tar.gz
+_usr_lib-1.tar.gz
+_usr_lib-2.tar.gz
+etc..
+etc..
+</pre>
+Now I just throw a copy of microperl, and my 2 scripts
+on to each cd, and I can boot with any floppy, mount my
+cd's and restore.
+
+Microperl dosn't do it all, and seems to have some small
+peculiarities compared to full perl. Notably, I needed to
+use `ls` and grep to simulate a glob or readdir.
+<p>
+First you make microperl, by "make -f Makefile.micro" in
+the perl58 distribution.
+The first thing I noticed was it didn't include alot of
+standard functions like opendir, so you need to use backticks
+and system alot. BUT you do get grep,arrays,hashes, and regexes;
+so it eliminates the need for awk,sed,expr, and the other apps
+usually needed by shell scripts. So it's actually a space saver
+at 908k.
+Also the system calls seemed to like double quotes, to pass parameters.
+<hr />
+</p>
+<pre class="code"><div class='codeblock'><tt class='codetext'>#!microperl
+
+#to substitute for a readdir or glob
+#I needed to ls then grep
+my @files = `ls`;
+@files = grep($_ =~ /.tar.gz$/,@files);
+foreach(@files){print &quot;\ngunzipping-&gt;$_\n&quot;; system(&quot;gunzip $_&quot;)}
+
+my @files = `ls`;
+@files = grep($_ =~ /.tar$/,@files);
+(@bases) = map{$_ =~ m/^(.*)-\d+.tar$/ }@files;
+print &quot;@bases\n&quot;;
+
+my %hash;
+$hash{$_}++ foreach (@bases);
+print &quot;$_: $hash{$_}\n &quot; foreach (sort {$hash{$a} &lt;=&gt; $hash{$b}} keys <span class="line-breaker">
+<font color="red">+</font></span>%hash);
+
+foreach $basename (keys %hash){
+#initialize first file
+if (-e &quot;$basename-1.tar&quot;){
+       $old= &quot;$basename-1.tar&quot;;
+       $new= &quot;$basename.tar&quot;;
+       rename $old,$new or warn $!;
+   }
+
+#the restore-rotate.pl script just swaps files like they were tapes
+system (&#39;tar&#39;,&#39;-x&#39;,&#39;-M&#39;,&quot;-F ./restore-rotate.pl $basename&quot;,&quot;-f$basenam<span class="line-breaker">
+<font color="red">+</font></span>e.tar&quot;);
+unlink &quot;$basename.tar&quot;; #cleanup
+print &quot;----------------------------------\n&quot;;
+}
+
+system(&quot;mkdir proc&quot;);
+system(&quot;mkdir tmp&quot;);
+system(&quot;mkdir home&quot;);
+exit;
+</tt></div><div class='embed-code-dl'><a href="?abspart=1;part=1;displaytype=displaycode;node_id=228040">&#91;download&#93;</a></div></pre>
+
+<hr />
+
+<p>
+<small><b>update</b> (broquaint): <tt class='inlinecode'>s{^#+$}(&lt;hr/&gt;)</tt></small>
+
+
+<div class="comment-on notes"><center><table width="100%" cellpadding="1" cellspacing="1" border="0" ><tr><th colspan="2" class="comment-on"><ul class="inline-list"><li><a href="?node_id=3333;parent=228040"><u>Comment on</u></a> bootstrapping with microperl</li><li><a href="?node_id=228040;displaytype=selectcode"><u>Select</u></a> or <a href="?displaytype=displaycode;node_id=228040"><u>Download</u></a> Code</li></ul></th></tr>
+</table></center>
+</div></div></p><div class="notes"><center><table width="100%" cellpadding="1" cellspacing="1" border="0" id="replies_table"><tr><th colspan="2" class="comment-on"><span class="note-ordering">Replies are listed 'Best First'.</span></th></tr>
+<tr class="reply" bgcolor="#eeeeee"><td  colspan=2>
+<a name="228087"></a>
+
+<a href="?node_id=228087">Re: bootstrapping with microperl</a>
+<br />
+<span class="attribution">by <a href="?node_id=65703">rob_au</a><span class="attribution-title"> (Abbot)</span> on Jan 18, 2003 at 23:17&nbsp;UTC</span>
+
+</td></tr>
+<tr class='reply-body pmnote-65703' bgcolor='ffffff'><td class='reply-body'><ul class='indent'><dl><dd><i>Microperl dosn't do it all, and seems to have some small peculiarities compared to full perl. Notably, I needed to use `ls` and grep to simulate a glob or readdir.</i></dd></dl><p>
+This is because functions which need to be implemented in a system-specific manner are not incorporated into the microperl binary.  This "feature" is mentioned in the Perl Journal article by Simon Cozens <a href="http://www.sysadminmag.com/tpj/issues/vol5_3/">here</a>.<p>
+As for the size of the compiled microperl binary, there is much room for hacking.  For instance the supplied <tt class='inlinecode'>Makefile.micro</tt> incorporates no optimisation flags in the compile process - With the additional of a <tt class='inlinecode'>-O3</tt> optimisation flag, a stripped microperl binary can be made as small as 705Kb.  Building against a C library optimised for embedded programming may shrink this binary further.<p>
+However as <a href="http://search.cpan.org/search?mode=module&amp;query=JHI">Jarkko</a> states, it is an experimental production and if you find problems with your build - Don't report them, fix them :-)
+<p>&nbsp;<p>
+<b>Update -</b> Following prompting by <a href="?node=PodMaster">PodMaster</a>, I compressed the stripped microperl binary which had been built with the <tt class='inlinecode'>-O3</tt> optimisation flag with UPX - The resultant binary was 308Kb in size.<p>
+<dl><dd><pre class="code"><div class='codeblock'><tt class='codetext'>
+kathmandu:/home/build/perl-5.8.0# upx -9 microperl -omicroperl.upx
+                     Ultimate Packer for eXecutables
+            Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001
+UPX 1.20         Markus F.X.J. Oberhumer &amp; Laszlo Molnar        May 23<span class="line-breaker">
+<font color="red">+</font></span>rd 2001
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+    721956 -&gt;    315924   43.75%    linux/386    microperl.upx
+
+Packed 1 file.
+</tt></div><div class='embed-code-dl'><a href="?node_id=228087;displaytype=displaycode;abspart=1;part=4">&#91;download&#93;</a></div></pre>
+</dd></dl>
+<p>&nbsp;<p>
+<tt><font size="-1">perl -le 'print+unpack("N",pack("B32","00000000000000000000001000011011"))'</font></tt></ul></td><td class='reply-body adjunct-links' align='left' valign='bottom'><a href="?node_id=3333;parent=228087">&#91;reply&#93;</a><br /><a href="?displaytype=displaycode;node_id=228087">[d/l]</a><br /><a href="?node_id=228087;displaytype=selectcode">[select]</a></td></tr>
+<tr class="reply" bgcolor="#eeeeee"><td  colspan=2>
+<a name="228164"></a>
+<ul class="indent">
+<a href="?node_id=228164">Re: Re: bootstrapping with microperl</a>
+<br />
+<span class="attribution">by <a href="?node_id=131741">zentara</a><span class="attribution-title"> (Archbishop)</span> on Jan 19, 2003 at 14:27&nbsp;UTC</span>
+</ul>
+</td></tr>
+<tr class='reply-body pmnote-131741' bgcolor='ffffff'><td class='reply-body'><ul class='indent'><ul class='indent'>Hi, that UPX is very cool. ++ .
+To continue discussion on microperl: Would you know how to
+modify the Makefile.micro to get it to produce a statically linked
+microperl?  It's still linked to some shared libs:
+<pre>
+libm.so.6 => /lib/libm.so.6 
+libc.so.6 => /lib/libc.so.6 
+/lib/ld-linux.so.2 => /lib/ld-linux.so.2 
+</pre>
+
+libc.so.6 and ld-linux.so.2 seem pretty standard in boot  disks, but  I was thinking of statically linking libm.so.6 .
+
+</ul></ul></td><td class='reply-body adjunct-links' align='left' valign='bottom'><a href="?node_id=3333;parent=228164">&#91;reply&#93;</a></td></tr>
+<tr class="reply" bgcolor="#eeeeee"><td  colspan=2>
+<a name="228233"></a>
+<ul class="indent"><ul class="indent">
+<a href="?node_id=228233">Re: Re: Re: bootstrapping with microperl</a>
+<br />
+<span class="attribution">by <a href="?node_id=65703">rob_au</a><span class="attribution-title"> (Abbot)</span> on Jan 19, 2003 at 21:08&nbsp;UTC</span>
+</ul></ul>
+</td></tr>
+<tr class='reply-body pmnote-65703' bgcolor='ffffff'><td class='reply-body'><ul class='indent'><ul class='indent'><ul class='indent'>It is very easy to build microperl statically - To do this, the flag <tt class='inlinecode'>-static</tt> needs to be added to the compiler flags.  For example:<p>
+<dl><dd><pre class="code"><div class='codeblock'><tt class='codetext'>
+LD = $(CC)
+DEFINES = -DPERL_CORE -DPERL_MICRO
+OPTIMIZE = -O3 -static
+CFLAGS = $(DEFINES) $(OPTIMIZE)
+LIBS = -lm
+_O = .o
+</tt></div><div class='embed-code-dl'><a href="?displaytype=displaycode;part=2;abspart=1;node_id=228233">&#91;download&#93;</a></div></pre>
+</dd></dl><p>
+On systems that support dynamic linking, this prevents linking with the shared libraries.  On other systems, this option has no effect.
+<p>&nbsp;<p>
+<tt><font size="-1">perl -le 'print+unpack("N",pack("B32","00000000000000000000001000011110"))'</font></tt></ul></ul></ul></td><td class='reply-body adjunct-links' align='left' valign='bottom'><a href="?parent=228233;node_id=3333">&#91;reply&#93;</a><br /><a href="?node_id=228233;displaytype=displaycode">[d/l]</a><br /><a href="?displaytype=selectcode;node_id=228233">[select]</a></td></tr>
+<tr class="reply" bgcolor="#eeeeee"><td  colspan=2>
+<a name="228338"></a>
+<ul class="indent"><ul class="indent"><ul class="indent">
+<a href="?node_id=228338">Re: Re: Re: Re: bootstrapping with microperl</a>
+<br />
+<span class="attribution">by <a href="?node_id=131741">zentara</a><span class="attribution-title"> (Archbishop)</span> on Jan 20, 2003 at 13:28&nbsp;UTC</span>
+</ul></ul></ul>
+</td></tr>
+<tr class="reply" bgcolor="#eeeeee"><td  colspan=2>
+<a name="228463"></a>
+
+<a href="?node_id=228463">Re: bootstrapping with microperl</a>
+<br />
+<span class="attribution">by <a href="?node_id=131741">zentara</a><span class="attribution-title"> (Archbishop)</span> on Jan 20, 2003 at 19:34&nbsp;UTC</span>
+
+</td></tr>
+<tr class='reply-body pmnote-131741' bgcolor='ffffff'><td class='reply-body'><ul class='indent'>Well I found that I my system, suse8.1, gcc3.2 that the static
+option had to be entered in a different spot with LIBS
+<pre>
+LD = $(CC)
+DEFINES = -DPERL_CORE -DPERL_MICRO
+OPTIMIZE = -O3
+CFLAGS = $(DEFINES) $(OPTIMIZE)
+LIBS = -static -lm
+_O = .o
+
+</pre>
+
+The interesting news out of this is that my static microperl, which has been packed with upx , is only  540k.
+<pre>
+3684060  microperl-staticO3
+1173816  microperl-staticO3-stripped
+538938  microperl.upx
+</pre>
+
+
+</ul></td><td class='reply-body adjunct-links' align='left' valign='bottom'><a href="?node_id=3333;parent=228463">&#91;reply&#93;</a></td></tr>
+</table></center>
+</div><p><div class="link-back back-to">
+Back to
+<a href="?node=Cool%20Uses%20for%20Perl">Cool Uses for Perl</a>
+</div></p>
+
+<!-- END general container -->
+
+        <!--/contained stuff-->
+      </td>
+      <!--nodelet handling code (monktainer)-->
+      <td  width="20%" valign="top" align="right"  class="nodelets">
+        <!-- Begin nodelets -->
+<table class='nodelet_container' id='nodelet_container'>
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Log_In">
+      <tr><th class="nodelet_head">
+          <span class="title">Log In</span><a href="?node=About the Log In" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<form method="post" action="?" enctype="multipart/form-data" name="login">
+<span><input type="hidden" name="node_id" value="228040"  ></input></span>
+<input type="hidden" name="op" value="login" />
+<input type="hidden" name="lastnode_id" value="228040" />
+<table border="0"><tr><td>
+Username:</td><td>
+<input type="text" name="user"  size="10" maxlength="34" />
+</td></tr><tr><td>
+Password:</td><td>
+<input type="password" name="passwd"  size="10" maxlength="10" />
+
+</td></tr></table>
+<label><input type="checkbox" name="expires" value="+10y" />remember me</label>
+<input type="submit" name="login" value="Login" />
+<br />
+<a href="?node_id=2513">What's my password?</a>
+<br />
+<a href="?node_id=101">Create A New User</a>
+</form>
+
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Node_Status">
+      <tr><th class="nodelet_head">
+          <span class="title">Node Status</span><a href="?node=About the Node Status" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<a href="?displaytype=edithistory;node_id=228040">node history</a><br />Node Type: CUFP [id://228040]<br />Approved by <a href="?node_id=114691">Aristotle</a><br />Front-paged by <a href="?node_id=81749">toma</a><br /><a href="?node_id=17645">help</a>
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Chatterbox">
+      <tr><th class="nodelet_head">
+          <span class="title">Chatterbox</span><a href="?node=About the Chatterbox" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<form method="get" action="?" enctype="multipart/form-data">
+<span><input type="hidden" name="node_id" value="228040"  ></input></span><i class="cb_quiet">and all is quiet...</i><br />
+<input type="submit" name="foo" value="Refresh" />
+</form>
+<i><br /> <a href="?node=ChatterBox%20FAQ">How do I use this?</a>  |  <a href="?node_id=20842">Other CB clients</a></i>
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Other_Users">
+      <tr><th class="nodelet_head">
+          <span class="title">Other Users</span><a href="?node=About the Other Users" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<span class="other-users-text">Others <span class="other-users-blurb">avoiding work at</span> the Monastery:</span> (8)<br /><ul class="spacey-list"><li><span class='even-row'><span class='item-000'><span class='user-level-22'><span class='user-324763'><a href="?node_id=324763" title="marto's home node. Level 22. Member of: power users">marto</a></span></span></span></span></li>
+<li><span class='odd-row'><span class='item-001'><span class='user-level-21'><span class='user-708738'><a href="?node_id=708738" title="LanX's home node. Level 21. Member of: pmdev">LanX</a></span></span></span></span></li>
+<li><span class='even-row'><span class='item-002'><span class='user-level-18'><span class='user-70929'><a href="?node_id=70929" title="atcroft's home node. Level 18">atcroft</a></span></span></span></span></li>
+<li><span class='odd-row'><span class='item-003'><span class='user-level-17'><span class='user-1001958'><a href="?node_id=1001958" title="karlgoethebier's home node. Level 17">karlgoethebier</a></span></span></span></span></li>
+<li><span class='even-row'><span class='item-004'><span class='user-level-16'><span class='user-258724'><a title="Not_a_Number's home node. Level 16" href="?node_id=258724">Not_a_Number</a></span></span></span></span></li>
+<li><span class='odd-row'><span class='item-005'><span class='user-level-16'><span class='user-1039428'><a href="?node_id=1039428" title="Eily's home node. Level 16">Eily</a></span></span></span></span></li>
+<li><span class='even-row'><span class='item-006'><span class='user-level-13'><span class='user-161890'><a href="?node_id=161890" title="Lady_Aleena's home node. Level 13">Lady_Aleena</a></span></span></span></span></li>
+<li><span class='odd-row'><span class='item-007'><span class='user-level-11'><span class='user-1158292'><a title="pryrt's home node. Level 11" href="?node_id=1158292">pryrt</a></span></span></span></span></li>
+</ul><span class='update-time'><small>As of 2017-06-16 12:55 GMT</small></span>
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Sections">
+      <tr><th class="nodelet_head">
+          <span class="title">Sections</span><a href="?node=About the Sections" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<ul class="spacey-list">
+<li><a href="?node=Seekers%20of%20Perl%20Wisdom">Seekers of Perl Wisdom</a></li>
+<li><a href="?node=Cool%20Uses%20for%20Perl">Cool Uses for Perl</a></li>
+<li><a href="?node=Meditations">Meditations</a></li>
+<li><a href="?node=Perl%20Monks%20Discussion">PerlMonks Discussion</a></li>
+<li><a href="?node=Categorized%20Questions%20and%20Answers">Categorized Q&amp;A</a></li>
+<li><a href="?node=Tutorials">Tutorials</a></li>
+<li><a href="?node=Obfuscated%20Code">Obfuscated Code</a></li>
+<li><a href="?node=Perl%20Poetry">Perl Poetry</a></li>
+<li><a href="?node=Perl%20News">Perl News</a></li>
+<li><a href="?node_id=483086">about</a></li>
+</ul>
+
+<!--
+args=(Sections)
+NODE.title = bootstrapping with microperl
+NODE.owner = 131741
+N.title = Sections sitedoclet
+N.owner = 17342
+-->
+
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Information">
+      <tr><th class="nodelet_head">
+          <span class="title">Information</span><a href="?node=About the Information" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<ul class="spacey-list">
+<li><a href="?node=PerlMonks%20FAQ">PerlMonks FAQ</a></li>
+<li><a href="?node=the%20Perl%20Monks%20guide%20to%20the%20Monastery">Guide to the Monastery</a></li>
+<li><a href="?node=Tidings">What's New at PerlMonks</a></li>
+<li><a href="?node=Voting%2FExperience%20System">Voting/Experience System</a></li>
+<li><a href="?node=Tutorials">Tutorials</a></li>
+<li><a href="?node=Reviews">Reviews</a></li>
+<li><a href="?node=Library">Library</a></li>
+<li><a href="?node=perlman%3Aperlfaq">Perl FAQs</a></li>
+<li><a href="?node=Where%20can%20I%20find%20more%20information%20on...">Other Info Sources</a></li>
+</ul>
+
+<!--
+args=(Information sitedoclet -TIDINGS_NEW )
+NODE.title = bootstrapping with microperl
+NODE.owner = 131741
+N.title = Information sitedoclet
+N.owner = 17342
+-->
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Find_Nodes">
+      <tr><th class="nodelet_head">
+          <span class="title">Find Nodes</span><a href="?node=About the Find Nodes" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<ul class="spacey-list">
+<li><a href="?node_id=6364;user=961">Nodes You Wrote</a></li>
+<li><a href="?node=Super%20Search">Super Search</a></li>
+<li><a href="?node=Perl%20Monks%20User%20Search">List Nodes By Users</a></li>
+<li><a href="?node=Newest%20Nodes">Newest Nodes</a></li>
+<li><a href="?node=Recently%20Active%20Threads">Recently Active Threads</a></li>
+<li><a href="?node=Selected%20Best%20Nodes">Selected Best Nodes</a></li>
+<li><a href="?node=Best%20Nodes">Best Nodes</a></li>
+<li><a href="?node=Worst%20Nodes">Worst Nodes</a></li>
+<li><a href="?node=Saints%20in%20our%20Book">Saints in our Book</a></li>
+</ul>
+
+<!--
+args=(Find Nodes sitedoclet -USER 961)
+NODE.title = bootstrapping with microperl
+NODE.owner = 131741
+N.title = Find Nodes sitedoclet
+N.owner = 17342
+-->
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Leftovers">
+      <tr><th class="nodelet_head">
+          <span class="title">Leftovers</span><a href="?node=About the Leftovers" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<ul class="spacey-list" id="user"></ul>
+<ul class="spacey-list" id="internal">
+<li><a href="?node=The%20St.%20Larry%20Wall%20Shrine">The St. Larry Wall Shrine</a></li>
+<li><a href="?node_id=781756">Buy PerlMonks Gear</a></li>
+<li><a href="?node=Offering%20Plate">Offering Plate</a></li>
+<li><a href="?node=Awards">Awards</a></li>
+<li><a href="?op=randomnode">Random Node</a></li>
+<li><a href="?node=Quests">Quests</a></li>
+<li><a href="?node=Craft">Craft</a></li>
+<li><a href="?node=Snippets%20Section">Snippets</a></li>
+<li><a href="?node=Code%20Catacombs">Code Catacombs</a></li>
+<li><a href="?node=Editor%20Requests">Editor Requests</a></li>
+</ul><ul class="spacey-list" id="external">
+<li><a href="http://blogs.perl.org/">blogs.perl.org</a></li>
+<!--<li>[http://planet.perl.org/|Planet Perl]</li>-->
+<li><a href="http://perlsphere.net/">Perlsphere</a></li>
+<li><a href="http://ironman.enlightenedperl.org/">Perl Ironman Blog</a></li>
+<li><a href="http://perlweekly.com/">Perl Weekly</a></li>
+<li><a href="http://perl.com/">Perl.com</a></li>
+<li><a href="http://www.perlfoundation.org/perl5/index.cgi">Perl 5 Wiki</a></li>
+<li><a href="http://jobs.perl.org/">Perl Jobs</a></li>
+<li><a href="http://www.pm.org/">Perl Mongers</a></li>
+<li><a href="http://www.perl.org/">Perl Directory</a></li>
+<li><a href="http://perldoc.perl.org/">Perl documentation</a></li>
+<li><a href="https://metacpan.org/">MetaCPAN</a></li>
+<li><a href="http://cpan.perl.org/">CPAN</a></li>
+</ul>
+
+<!--
+args=(Leftovers sitedoclet -USER_LINKS )
+NODE.title = bootstrapping with microperl
+NODE.owner = 131741
+N.title = Leftovers sitedoclet
+N.owner = 17342
+-->
+
+
+      </td></tr>
+
+    </tbody>
+
+<!-- Nodelet Break -->
+    <tbody class="nodelet" id="Voting_Booth">
+      <tr><th class="nodelet_head">
+          <span class="title">Voting Booth</span><a href="?node=About the Voting Booth" class="nodelethead-annot"><sup>?</sup></a>
+      </th></tr>
+      <tr><td class="nodelet_body">
+
+<div class="poll-vote-form"><b>How many monitors do you use while coding?</b><form method="post" action="?" enctype="multipart/form-data">
+<span><input type="hidden" name="displaytype" value="display"  ></input></span><span><input type="hidden" name="node_id" value="1191826"  ></input></span><p><label><input type="radio" name="vote" value="0" />None - I don't code</label><br /><label><input type="radio" name="vote" value="1" />0 - Ticker-tape is a purer representation of a Turing Machine</label><br /><label><input type="radio" name="vote" value="2" />1 - A laptop screen or single monitor desktop workstation</label><br /><label><input type="radio" name="vote" value="3" />1 - And it's cracked. And I like practicing my trade while lying on a bed of nails</label><br /><label><input type="radio" name="vote" value="4" />2 - The standard dev kit suits me fine</label><br /><label><input type="radio" name="vote" value="5" />3 - Fewer than three monitors wouldn't present enough insight into what I'm working on</label><br /><label><input type="radio" name="vote" value="6" />4 - Everyone else has two or three. I'm not like everyone else</label><br /><label><input type="radio" name="vote" value="7" />5 - This configuration reminds me of the 1987 5-cylinder VW Passat my parents let me drive in high school</label><br /><label><input type="radio" name="vote" value="8" />6 - I saw such a thing on the Internet, and had to have it</label><br /><label><input type="radio" name="vote" value="9" />6 - Because I haven't figured out how to <a href="https://www.theregister.co.uk/2015/03/18/sir_terry_pratchett_http_header/">add more</a></label><br /><label><input type="radio" name="vote" value="10" />7 - I need all the luck I can get, for this code to work</label><br /><label><input type="radio" name="vote" value="11" />8 - Because my power strip had eight outlets available</label><br /><label><input type="radio" name="vote" value="12" />9 - A 3x3 array was the the most I could fit into my Faraday shielded <a href="http://www.shtfplan.com/">SHTF</a> headquarters</label><br /><label><input type="radio" name="vote" value="13" />More than 9 - Most of them are just displaying graphs / mock code to make the boss think I'm doing something critical</label><br /><input type="submit" value="Vote" /></p></form><p><a href="?node_id=1191826">Results (412 votes)</a>.  Check out <a href="?node=past%20polls">past polls</a>.</p></div>
+      </td></tr>
+
+    </tbody>
+
+
+</table>
+
+        <!-- End nodelets -->
+      </td>
+
+      <!--/nodelet handling code (monktainer)-->
+
+    </tr>
+  </table>
+</center>
+
+<!-- End main (monktainer)-->
+<br />
+<br />
+
+<div id="footer">
+          PerlMonks parthenogenetically spawned by <a href="?node=vroom">Tim Vroom</a>.<br/>
+      PerlMonks somehow became entangled with
+      <a href="http://www.perlfoundation.org">The Perl Foundation</a>.<br />
+      Marvelous Managed Hosting and Bandwidth Generously Provided by
+      <a href="http://promote.pair.com/direct.pl?perlmonks.org">
+      pair Networks</a>
+
+  <br/>Built with the <a href="http://perl.org">Perl programming language</a>.
+</div>
+<!-- /monktainer -->
+
+  
+  </body>    
+</html>
