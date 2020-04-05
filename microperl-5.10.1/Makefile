@@ -35,7 +35,8 @@ H = av.h uconfig.h cop.h cv.h embed.h embedvar.h form.h gv.h handy.h \
 HE = $(H) EXTERN.h
 
 clean:
-	-rm -f $(O) microperl generate_uudmap$(_X) uudmap.h
+	rm -f $(O) microperl generate_uudmap$(_X) uudmap.h
+	rm -f *.o
 
 distclean:	clean
 
