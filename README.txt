@@ -1,7 +1,9 @@
 # Microperl-Standalone
 
-    A small(er) Perl for simple tasks
-    by ben@srctxt.com   
+   A small(er) Perl for simple tasks
+
+   by ben@srctxt.com   
+   id bxt0aqvesh
 
 
 
@@ -35,4 +37,3 @@ For upgrading downloading your Perl sources and then:
 - make -f Makefiles.micro 
 
 
-id:btxt0aqvesh
