@@ -3,8 +3,7 @@
    A small(er) Perl for simple tasks
 
    by ben@srctxt.com   
-   id bxt0aqvesh
-
+   id bxt0flqlbfu 
 
 
 ## Why 
